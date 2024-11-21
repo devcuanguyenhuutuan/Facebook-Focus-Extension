@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Facebook Feed & Contacts Hider",
+    "version": "1.0",
+    "description": "Hides the Facebook News Feed and the Contacts section on the right side.",
+    "permissions": [
+      "activeTab"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["*://www.facebook.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_icon": {
+        "16": "icons/hide-16.png",
+        "48": "icons/hide-48.png",
+        "128": "icons/hide-128.png"
+      }
+    },
+    "host_permissions": [
+      "http://*/*",
+      "https://*/*"
+    ]
+  }
+  
