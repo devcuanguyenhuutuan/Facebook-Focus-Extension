@@ -8,6 +8,14 @@ function hideNewsFeed() {
     }
 }
 
+// Function to hide the News Feed
+function hideMain() {
+    const main = document.querySelector('div[role="main"]'); // Facebook's main section
+    if (main) {
+        main.style.display = 'none';
+    }
+}
+
 // Function to hide the Contacts section (Right Sidebar)
 function hideContacts() {
     const rightColumn = document.querySelector('[role="complementary"]'); // Facebook's right sidebar
@@ -30,6 +38,7 @@ window.addEventListener('load', () => {
     hideNewsFeed();
     hideContacts();
     hideVideos();
+    hideMain();
 });
 
 // Also, keep watching for new content dynamically added (for infinite scroll)
@@ -37,5 +46,6 @@ const observer = new MutationObserver(() => {
     hideNewsFeed();
     hideContacts();
     hideVideos();
+    hideMain();
 });
 
